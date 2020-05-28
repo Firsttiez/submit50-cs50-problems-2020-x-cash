@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void)
+{ 
+
+
+float a;
+int q=0; //quaters
+int d=0; // dims
+int n=0; // nickels
+int p=0; // pennies
+int i;
+
+do
+  {
+  printf("Hello, how much change do I owe you?\n");
+  a = get_float("");
+  }
+  while(a<=0);
+
+i= a*100;
+
+    while(i>=25)
+    {
+    i=i-25;
+    q++;
+    }
+    while(i>=10 && i<25)
+    {
+    i=i-10;
+    d++;
+    }
+    while(i>=5 && i<10)
+    {
+    i=i-5;
+    n++;
+    }
+
+    while(i>0 && i<5)
+    {
+    i= i-1;
+    p++;
+    }
+
+  {
+  printf("%d\n", q+d+n+p);
+  }
+return 0;    
+ }
